@@ -12,7 +12,7 @@ import { HEROES } from '../app.mock-heroes';
   styleUrls: [ './hero-detail.component.css' ]
 })
 export class HeroDetailComponent implements OnInit {
-  hero: Hero=HEROES[0];
+  hero: Hero =HEROES[0];
 
   constructor(
     private route: ActivatedRoute,
@@ -32,5 +32,10 @@ export class HeroDetailComponent implements OnInit {
 
   goBack(): void {
     this.location.back();
+  }
+
+  save(): void {
+    this.heroService.updateHero(this.hero)
+      .subscribe(() => this.goBack());
   }
 }
