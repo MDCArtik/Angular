@@ -1,2 +1,7 @@
 <h3>HEROES</h3>
-<p>Get your heroes here</p>
+<mat-nav-list>
+    <a mat-list-item *ngFor="let hero of heroes" routerLink="/detail/{{hero.id}}">
+        <span>{{hero.id}}</span>  
+        <span>{{hero.name}}</span>      
+    </a>
+</mat-nav-list>

@@ -17,6 +17,8 @@ import { MessagesComponent } from './messages/messages.component';
 import { CrisisListComponent } from './crisis-list/crisis-list.component';
 import { HeroesListComponent } from './heroes-list/heroes-list.component';
 import { PageNotFoundComponent} from './page-not-found/page-not-found.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MaterialModule } from './material/material.module';
 
 @NgModule({
   imports: [
@@ -24,6 +26,7 @@ import { PageNotFoundComponent} from './page-not-found/page-not-found.component'
     FormsModule,
     AppRoutingModule,
     HttpClientModule,
+    MaterialModule,
     RouterModule.forRoot([
       {path: 'crisis-list', component: CrisisListComponent},
       {path: 'heroes-list', component: HeroesListComponent},
@@ -35,7 +38,8 @@ import { PageNotFoundComponent} from './page-not-found/page-not-found.component'
     // Remove it when a real server is ready to receive requests.
     HttpClientInMemoryWebApiModule.forRoot(
       InMemoryDataService, { dataEncapsulation: false }
-    )
+    ),
+    BrowserAnimationsModule
   ],
   declarations: [
     AppComponent,
