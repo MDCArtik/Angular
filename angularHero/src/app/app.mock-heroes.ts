@@ -1,8 +1,8 @@
 import { Hero } from './app.hero';
 
 export const HEROES: Hero[] = [
-    { id: 11, name: 'Dr Nice',age: 11},
-    { id: 12, name: 'Narco',age: 12 },
+    { id: 21, name: 'Dr Nice',age: 11},
+    { id: 22, name: 'Narco',age: 12 },
     { id: 13, name: 'Bombasto',age: 13 },
     { id: 14, name: 'Celeritas',age: 14 },
     { id: 15, name: 'Magneta',age: 15 },
